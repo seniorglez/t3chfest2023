@@ -2,7 +2,7 @@
 require 'src/exporters/resources/ResourcesList.php';
 
 $requestData = new ResourcesList();
-$arrayResources = $requestData->getResourcesByType("hijashjkahjkshjkl");
+$arrayResources = $requestData->getResourceByHash("hijashjkahjkshjkl");
 
 header('Content-type: application/json');
 echo json_encode($arrayResources);
