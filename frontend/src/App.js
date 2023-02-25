@@ -8,16 +8,17 @@ function App() {
 
   const viewSelector = (view) =>{
     switch (view) {
-      case 1:
-        return <View1/>
-        break;
-      
+  
       case 2:
         return <View2/>
         break;
 
       case 3:
         return <View3/>
+        break;
+
+      default:
+        return <View1/>
         break;
 
     }
