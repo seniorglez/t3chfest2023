@@ -8,11 +8,6 @@ import React, { useState, useEffect } from 'react';
 function App() {
 
 
-
-  useEffect(() => {
-      setState(step)
-  },[step]);
-
   function viewSelector(view  ,setState){
     switch (view) {
   
@@ -30,6 +25,12 @@ function App() {
 
   const [state, setState] = useState(1)
   const [step, setStep] = useState(1)
+
+
+
+  useEffect(() => {
+    setState(step)
+  },[step]);
 
   return (
     <div className="App">
