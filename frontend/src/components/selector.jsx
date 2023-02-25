@@ -7,17 +7,23 @@ export function SubSelector(props){
     
     console.log(props.value)
     let subResourceList = []
-    if (props.value === props.row){
-        subResourceList = ["c15" ,"quita Nieves" , "jamon"]
+    if (props.value === 1 ){
+        subResourceList = ["4x4" , "furgonetas"]
+
+    }else if(props.value === 0 ){
+        subResourceList = ["Habitaciones" , "Pisos"]
+
+    }else if(props.value === 2){
+        subResourceList = ["Drones"]
     }
 
     return(
  
     subResourceList.map( (subResource) =>
-        <div>   
-                    <p>{subResource}</p>
-                    <input type="checkbox"/>
-                </div>
+        <div className='subSelectorChoice'>     
+            <input type="checkbox"/>
+            <p>{subResource}</p>
+        </div>
     ) 
 
     )
@@ -28,25 +34,44 @@ export function SubSelector(props){
 export function Selector(){
 
     const [resource, setResource] = useState(-1)
-    const [clicked , setCLicked] = useState(false)
-    const click = [clicked, setCLicked]
+    const [clicked , setClicked] = useState(false)
+    const [actual, setActual] = useState(false)
+
+    function updateSelector(choice){
+        
+        setClicked(!clicked)
+        if (actual !== choice){
+            setResource(choice)
+            setActual(choice)
+        }else{
+            if (!clicked){
+                setResource(choice)
+            }else{
+                setResource(-1)
+            }
+        }
+        
+        
+    }
 
     return(
-        <div className='selector'>
-                <div className='button' onClick={() => setResource(0)} >
-                    <p>Inmueble</p>
-                    <SubSelector value = {resource} row = {0}/>
-                </div>
+        <div>
+            <div className='selector'>
+                    <div className='button' onClick={() => updateSelector(0)} >
+                        <p>Inmueble</p>
+                    </div>
 
-                <div className='button' onClick={() => setResource(1)} >
-                    <p>Vehiculo</p>
-                    <SubSelector value = {resource} row = {1}/>
-                </div>
+                    <div className='button' onClick={() => updateSelector(1)} >
+                        <p>Vehiculo</p>
+                    </div>
 
-                <div className='button' onClick={() => setResource(2)}>
-                    <p>Maquinaria</p>
-                    <SubSelector value = {resource} row = {2} clicked={click}/>
-                </div>
+                    <div className='button' onClick={() => updateSelector(2)}>
+                        <p>Maquinaria</p>
+                    </div>
+            </div>
+            <div className={'subSelector'+String(actual)} >
+                <SubSelector  value = {resource}/>
+            </div>
         </div>
     );
 }

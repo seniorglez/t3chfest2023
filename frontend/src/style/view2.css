@@ -1,0 +1,47 @@
+.view{
+    margin-left: auto;
+    text-align: center;
+}
+
+.mainDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.mainList{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+
+.cell{
+    border: 1px black solid;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.cell .tittle{
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.cell .content{
+    margin: auto
+}
+
+.cell .content .content_desc{
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+
+.filterOptions{
+    margin: auto;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+
+}

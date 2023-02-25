@@ -1,12 +1,38 @@
 
-import { MainList } from "./mainList";
+import React, { useEffect ,useState} from 'react'
+import axios from 'axios';
 
-function View2() {
+import { MainList } from "./mainList";
+import FilterOptions from "./filterOptions";
+import '../style/view2.css'
+
+
+function View2(props) {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/resources.php')
+      .then(response => {
+        setData(response.data);
+        console.log(response)
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
+
     return (
-      <div className="border">
-        <MainList/>
+      <div className="view">
+        <h1>RESULTADOS</h1>
+        <div className="mainDiv">
+          <FilterOptions/>
+          <MainList data={data} setStep={props.setState} />
+        </div>
       </div>
     );
+    
   }
   
   export default View2;
