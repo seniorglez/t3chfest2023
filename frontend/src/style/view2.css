@@ -1,0 +1,38 @@
+
+.view{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.mainList{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+
+.cell{
+    margin-left: auto;
+    width: 100%;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.cell .tittle{
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.cell .content{
+    margin: auto
+}
+
+.filterOptions{
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+
+}
