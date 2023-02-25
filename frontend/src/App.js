@@ -20,9 +20,6 @@ function App() {
         return <View3/>
         break;
 
-      default:
-        console.log("XDDD")
-        break;
     }
   }
 
