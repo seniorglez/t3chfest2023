@@ -1,4 +1,6 @@
-# t3chfest2023
+# Shortage resources
+
+![image](https://user-images.githubusercontent.com/37089170/221373625-c52ef792-b0cb-4bbc-b591-e325879304e8.png)
 
 # Shartage resources
 ## Descripción
