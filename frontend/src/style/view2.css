@@ -1,8 +1,11 @@
-
 .view{
+    margin-left: auto;
+    text-align: center;
+}
+
+.mainDiv{
     display: flex;
     flex-direction: row;
-    margin: auto;
 }
 
 .mainList{
@@ -12,11 +15,10 @@
 }
 
 .cell{
-    margin-left: auto;
-    width: 100%;
     border: 1px black solid;
     display: flex;
     flex-direction: row;
+    width: 90%;
 }
 
 .cell .tittle{
@@ -30,6 +32,7 @@
 }
 
 .filterOptions{
+    margin: auto;
     border: 1px black solid;
     display: flex;
     flex-direction: column;
