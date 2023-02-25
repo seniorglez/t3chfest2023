@@ -10,7 +10,6 @@ function App() {
 
 
   useEffect(() => {
-      console.log(step)
       setState(step)
   },[step]);
 
