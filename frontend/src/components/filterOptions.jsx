@@ -6,15 +6,11 @@ function FilterOptions() {
         <div className="filterOptions">
             <p>Tipo de recurso</p>
             <div>
-                <p>Inmuebles</p>
+                <p>4x4</p>
                 <input type="radio" name="type"/>
             </div>
             <div>
-                <p>Vehiculos</p>
-                <input type="radio" name="type"/>
-            </div>
-            <div>
-                <p>Maquinaria</p>
+                <p>Furgonetas</p>
                 <input type="radio" name="type"/>
             </div>
 

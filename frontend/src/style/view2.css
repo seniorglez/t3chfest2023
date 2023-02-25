@@ -31,6 +31,12 @@
     margin: auto
 }
 
+.cell .content .content_desc{
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+
 .filterOptions{
     margin: auto;
     border: 1px black solid;

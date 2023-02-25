@@ -6,13 +6,13 @@ import '../style/view2.css'
 
 
 export function Cell(props){
-    console.log(props.resource)
+    console.log(props.resource.name)
     return(
-        <div className='cell'>
-            <h1 className='tittle'>{props.resource.Name}</h1>
+        <div className='cell' onClick={() => props.setStep(3)}>
+            <h1 className='tittle'>{props.resource.name}</h1>
             <div className='content'>
-                <p>{"Desc: " + String(props.resource.description)}</p>
-                <p>{"Distancia: " + String(props.resource.distance)}</p>
+                <p className='content_desc'>{ String(props.resource.observations)}</p>
+                <p>{"Coordenadas: " + String(props.resource.cords)}</p>
             </div>
         </div>
     );
@@ -21,21 +21,13 @@ export function Cell(props){
 
 export function MainList(props){
 
-
-
-    const resourceOBJ = {
-        name : "c15",
-        description : "Puta madre",
-       distance : "5km"
-    }
-
     let resourceList = props.data
 
     return(
         <div className='mainList'>
 
             {   
-                resourceList.map( (resource) => <Cell resource = {resource}/>)
+                resourceList.map( (resource) => <Cell resource = {resource} setStep={props.setStep}/>)
             }
         </div>
     );

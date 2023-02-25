@@ -7,8 +7,14 @@ export function SubSelector(props){
     
     console.log(props.value)
     let subResourceList = []
-    if (props.value !== -1 ){
-        subResourceList = ["c15" ,"quita Nieves" , "jamon"]
+    if (props.value === 1 ){
+        subResourceList = ["4x4" , "furgonetas"]
+
+    }else if(props.value === 0 ){
+        subResourceList = ["Habitaciones" , "Pisos"]
+
+    }else if(props.value === 2){
+        subResourceList = ["Drones"]
     }
 
     return(

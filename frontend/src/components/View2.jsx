@@ -7,7 +7,7 @@ import FilterOptions from "./filterOptions";
 import '../style/view2.css'
 
 
-function View2() {
+function View2(props) {
 
   const [data, setData] = useState([]);
 
@@ -28,7 +28,7 @@ function View2() {
         <h1>RESULTADOS</h1>
         <div className="mainDiv">
           <FilterOptions/>
-          <MainList data={data} />
+          <MainList data={data} setStep={props.setState} />
         </div>
       </div>
     );
