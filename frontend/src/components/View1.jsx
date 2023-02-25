@@ -5,7 +5,6 @@ import '../style/view1.css'
 
 function View1() {
   
-
     const [distance, setDistance] = useState(0)
     const [text , setText] = useState("")
     return (
@@ -13,14 +12,14 @@ function View1() {
             <p>Busca recursos</p>
             <div className='searchBar'>
                 <input type="text" value={text} onChange={ev => setText(ev.target.value)} className='input'/> 
-                <button>Buscar</button>
+                <button className='searchBarButton'>Buscar</button>
+            </div>
+            <div className='distance'>
+                <p className='distance_text'>Distancia</p>
+                <input className='distance_input' type="range" value={distance} onChange={ev => setDistance(ev.target.value)}/> 
             </div>
             <Selector/>
-            <div className='distance'>
-                <p>Distancia</p>
-                <input type="range" value={distance} onChange={ev => setDistance(ev.target.value)}/> 
-            </div>
-
+            
         </div>
     );
 }

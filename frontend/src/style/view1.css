@@ -1,26 +1,69 @@
 
 .searchBar{
     border: 1px black solid;
-    width: 31vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    margin: auto;
+    width: 95vw;
 }
 
 .searchBar .input{
-    width: 95vw;
+    width: 80vw;
     height: 10vh;
+}
+
+.searchBar .searchBarButton{
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .selector{
     margin: auto;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     width: 95vw;
 }
 
 .selector .button{
     border: 1px black solid;
-    width: 31vw;
+    width: 33.4%;
+    box-sizing: border-box;
 }
+
+.subSelector0{
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5vw;
+    width: 31.5%;
+}
+
+.subSelector1{
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    margin-left: 34.1vw;
+    width: 31.5%;
+}
+
+.subSelector2{
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    margin-left: 65.75vw;
+    width: 31.5%;
+}
+
+
+
+.subSelectorChoice{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+
 
 .distance{
     margin: auto;
@@ -29,4 +72,13 @@
     flex-wrap: wrap;
     width: 95vw;
     border: 1px black solid;
+}
+
+.distance .distance_input{
+    margin-left: 2vw;
+    width: 70vw;
+}
+
+.distance .distance_text{
+    margin-left: 2vw;
 }
