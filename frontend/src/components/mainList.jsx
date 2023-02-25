@@ -25,7 +25,6 @@ export function MainList(){
 
     return(
         <div className='border'>
-            <p>RESULTADOS</p>
             {
                 resourceList.map( (resource) => <Cell resource = {resource}/>)
             }

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      {viewSelector(1)}
+      {viewSelector(2)}
     </div>
   );
 }
