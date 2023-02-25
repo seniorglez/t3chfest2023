@@ -3,7 +3,7 @@ import { MainList } from "./mainList";
 
 function View2() {
     return (
-      <div>
+      <div className="border">
         <MainList/>
       </div>
     );

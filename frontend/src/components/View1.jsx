@@ -1,12 +1,15 @@
-import MainSearchBar from '../components/mainSearchBar';
-import {FilterOptions} from '../components/filterOptions';
-
+import React, { useState } from 'react'
+import {Selector} from './selector';
+import '../style/border.css'
 
 function View1() {
+
+  const [text , setText] = useState("")
   return (
     <div>
-      <MainSearchBar/>
-      <FilterOptions/>
+        <p>Busca recursos</p>
+        <input type="text" value={text} onChange={ev => setText(ev.target.value)}/> 
+        <Selector/>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import '../style/mainSearchBar.css'
+import '../style/border.css'
 
 
 export function Cell(props){
     return(
-        <div className='mainSearchBar'>
+        <div className='border'>
             <p>[image]</p>
             <h1>{props.resource.name}</h1>
             <p>{props.resource.description}</p>
@@ -24,7 +24,7 @@ export function MainList(){
     let resourceList = [resourceOBJ, resourceOBJ, resourceOBJ]
 
     return(
-        <div>
+        <div className='border'>
             <p>RESULTADOS</p>
             {
                 resourceList.map( (resource) => <Cell resource = {resource}/>)
