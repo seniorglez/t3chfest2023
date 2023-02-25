@@ -1,0 +1,32 @@
+
+.searchBar{
+    border: 1px black solid;
+    width: 31vw;
+}
+
+.searchBar .input{
+    width: 95vw;
+    height: 10vh;
+}
+
+.selector{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95vw;
+}
+
+.selector .button{
+    border: 1px black solid;
+    width: 31vw;
+}
+
+.distance{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95vw;
+    border: 1px black solid;
+}

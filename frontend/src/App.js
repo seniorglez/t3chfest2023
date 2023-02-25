@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import View1 from './components/View1';
+import View2 from './components/View2';
+import View3 from './components/View3';
 
 function App() {
+
+  const viewSelector = (view) =>{
+    switch (view) {
+  
+      case 2:
+        return <View2/>
+
+      case 3:
+        return <View3/>
+
+      default:
+        return <View1/>
+
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {viewSelector(1)}
     </div>
   );
 }
