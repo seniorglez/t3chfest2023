@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import View1 from './components/View1';
 import View2 from './components/View2';
@@ -11,15 +11,12 @@ function App() {
   
       case 2:
         return <View2/>
-        break;
 
       case 3:
         return <View3/>
-        break;
 
       default:
         return <View1/>
-        break;
 
     }
   }

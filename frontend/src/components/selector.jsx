@@ -7,7 +7,7 @@ export function SubSelector(props){
     
     console.log(props.value)
     let subResourceList = []
-    if (props.value == props.row){
+    if (props.value === props.row){
         subResourceList = ["c15" ,"quita Nieves" , "jamon"]
     }
 

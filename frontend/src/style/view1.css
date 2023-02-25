@@ -1,6 +1,7 @@
 
 .searchBar{
-
+    border: 1px black solid;
+    width: 31vw;
 }
 
 .searchBar .input{
